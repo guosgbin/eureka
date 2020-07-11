@@ -20,12 +20,17 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
+ * 单元测试抽象类的子类
+ *
  * @author David Liu
  */
 public class ApplicationsResourceTest extends AbstractTester {
     private ApplicationsResource applicationsResource;
     private Applications testApplications;
 
+    /**
+     * 在方法执行前，此方法会执行，初始化Eureka-Server模拟环境
+     */
     @Override
     @Before
     public void setUp() throws Exception {
@@ -42,8 +47,12 @@ public class ApplicationsResourceTest extends AbstractTester {
         }
     }
 
+    /**
+     * 因为是模拟环境，对 Eureka-Server 的操作不是 Eureka-Client 请求 Eureka-Server 的方式，而是直接调用单元测试对应的方法
+     */
     @Test
     public void testFullAppsGetJson() throws Exception {
+        // 直接调用getContainers方法
         Response response = applicationsResource.getContainers(
                 Version.V2.name(),
                 MediaType.APPLICATION_JSON,

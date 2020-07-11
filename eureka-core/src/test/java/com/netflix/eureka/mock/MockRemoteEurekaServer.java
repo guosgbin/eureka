@@ -25,6 +25,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
+ * 见名知意 就是 模拟远程EurekaServer
+ * 新单词 Mock：模拟，模仿，虚假的
  * @author Nitesh Kant
  */
 public class MockRemoteEurekaServer extends ExternalResource {

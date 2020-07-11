@@ -36,6 +36,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 
 /**
+ * 这是一个测试抽象类，使用任意一个子类的单元测试执行即可执行 Eureka-Server 逻辑的调试
+ *
  * @author Nitesh Kant
  */
 public class AbstractTester {
